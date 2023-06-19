@@ -163,11 +163,9 @@ class Alarm_Clock:
     def Threading_1(self):
         x = Thread(target=self.set_alarm_time)
         x.start()
-
-# This function gets called when the start button pressed 
-# in the another window for setting alarm time.
+	    
     def set_alarm_time(self):
-        """"function printing"""
+        """"This function gets called when the start button pressed in the another window for setting alarm time."""
         alarm_time = f"{self.hours_combobox.get()}:{self.minutes_combobox.get()}"
         messagebox.showinfo("Alarm Set", f"Alarm set for {alarm_time}")
         try:
