@@ -72,10 +72,8 @@ class Alarm_Clock:
         self.display.config(text = current_time)
         self.display.after(100, self.show_time)
 
-    # Another Window: This window will show, when the "Set Alarm"
-    # Button will pressed.
     def another_window(self):
-        """"function printing"""
+        """"Another Window: This window will show, when the "Set Alarm" Button will pressed."""
         self.window_2 = Tk()
         self.window_2.title("Set Alarm")
         self.window_2.geometry("680x420+200+200")
@@ -153,9 +151,8 @@ class Alarm_Clock:
 
         self.window_2.mainloop()
 
-# to play the ringtones while the alarm gets notified.
     def test_window(self):
-        """"function printing"""
+        """"to play the ringtones while the alarm gets notified."""
         process = multiprocessing.Process(target=playsound, 
         args=(ringtones_path[self.ringtones_combobox.get()],))
         process.start()
